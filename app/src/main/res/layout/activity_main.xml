@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F0EF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#3B6BD7"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="CALCULADORA"
+        android:textColor="#FFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/painel"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:textColor="#000000"
+        android:background="@drawable/editpainel"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <TextView
+        android:id="@+id/primeiroNumeroText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/editextview"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Primeiro número"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/painel"
+        app:layout_constraintStart_toStartOf="@+id/painel"
+        app:layout_constraintTop_toBottomOf="@+id/painel" />
+
+    <EditText
+        android:id="@+id/primeiroNumeroInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext"
+        android:gravity="center_vertical|start"
+        android:hint="Digite aqui"
+        android:inputType="numberDecimal"
+        android:paddingStart="16dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/primeiroNumeroText"
+        app:layout_constraintStart_toStartOf="@+id/primeiroNumeroText"
+        app:layout_constraintTop_toBottomOf="@+id/primeiroNumeroText" />
+
+    <TextView
+        android:id="@+id/segundoNumeroText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/editextview"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Segundo número"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/primeiroNumeroInput"
+        app:layout_constraintStart_toStartOf="@+id/primeiroNumeroInput"
+        app:layout_constraintTop_toBottomOf="@+id/primeiroNumeroInput" />
+
+    <EditText
+        android:id="@+id/segundoNumeroInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext"
+        android:gravity="center_vertical|start"
+        android:hint="Digite aqui"
+        android:inputType="numberDecimal"
+        android:paddingStart="16dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/segundoNumeroText"
+        app:layout_constraintStart_toStartOf="@+id/segundoNumeroText"
+        app:layout_constraintTop_toBottomOf="@+id/segundoNumeroText" />
+
+    <Button
+        android:id="@+id/somaButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/square_button"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/subtracaoButton"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/segundoNumeroInput"
+        app:layout_constraintTop_toBottomOf="@+id/segundoNumeroInput" />
+
+    <Button
+        android:id="@+id/subtracaoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/square_button"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/somaButton"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicacaoButton"
+        app:layout_constraintStart_toEndOf="@+id/somaButton"
+        app:layout_constraintTop_toTopOf="@+id/somaButton" />
+
+    <Button
+        android:id="@+id/multiplicacaoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/square_button"
+        android:text="*"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:paddingTop="10dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/somaButton"
+        app:layout_constraintEnd_toStartOf="@+id/divisaoButton"
+        app:layout_constraintStart_toEndOf="@+id/subtracaoButton"
+        app:layout_constraintTop_toTopOf="@+id/somaButton" />
+
+    <Button
+        android:id="@+id/divisaoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/square_button"
+        android:text="/"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/somaButton"
+        app:layout_constraintEnd_toEndOf="@+id/segundoNumeroInput"
+        app:layout_constraintStart_toEndOf="@+id/multiplicacaoButton"
+        app:layout_constraintTop_toTopOf="@+id/somaButton" />
+
+    <Button
+        android:id="@+id/calcularButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/square_button"
+        android:text="CALCULAR"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/segundoNumeroInput"
+        app:layout_constraintStart_toStartOf="@+id/segundoNumeroInput"
+        app:layout_constraintTop_toBottomOf="@+id/somaButton" />
+
+    <Button
+        android:id="@+id/limparButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/square_red_button"
+        android:text="LIMPAR"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/calcularButton"
+        app:layout_constraintStart_toStartOf="@+id/calcularButton"
+        app:layout_constraintTop_toBottomOf="@+id/calcularButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
