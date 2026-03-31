@@ -1,4 +1,4 @@
-# 📱 Calculadora Simples
+# 🧮 Calculadora Simples
 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"> <img alt="NPM License" src="https://img.shields.io/npm/l/license?style=for-the-badge">
 <div align="center">
   <img src="https://github.com/walkerviani/assets/blob/main/calculadora_simples.jpeg" width="200" height="500">
